@@ -10,15 +10,20 @@ class Math:
         elif operation == '3':
             return num1 * num2
         elif operation == '4':
-            if num1 == 0
+            if num1 == 0:
                 raise ZeroDivisionError ("You can't divide by zero")
-            elif num2 == 0
+            elif num2 == 0:
                 raise ZeroDivisionError ("You can't divide by zero")
             return num1 / num2
         else:
             raise ValueError("Invalid operation")
 
-
-
-
-
+class Calculator:
+    def __init__(self):
+        self.operator = Math()
+        self.menu = {
+            '1' : "Addition",
+            '2' : "Subtraction",
+            '3' : "Multiplication",
+            '4' : "Division"
+        }
