@@ -27,3 +27,12 @@ class Calculator:
             '3' : "Multiplication",
             '4' : "Division"
         }
+
+    def get_numbers(self, prompt):
+        while True:
+            try:
+                return float(input(prompt))
+            except ValueError:
+                print("That's not a number. Please try again.")
+            
+
