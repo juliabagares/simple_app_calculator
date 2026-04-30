@@ -28,7 +28,8 @@ class Calculator:
             '4' : "Division"
         }
 
-    def get_numbers(self, prompt):
+    @staticmethod
+    def get_number(prompt):
         while True:
             try:
                 return float(input(prompt))
@@ -45,6 +46,7 @@ class Calculator:
             if choice not in self.menu:
                 print("Invalid choice. Choose 1, 2, 3, or 4.")
                 continue
-                
 
+            n1 = self.get_number("Enter first number: ")
+            n2 = self.get_number("Enter second number: ")
 
