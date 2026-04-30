@@ -58,4 +58,9 @@ class Calculator:
             except Exception as e:
                 print(f"\n An expected error occurred: {e}")
 
+            retry = input("\n Want ot go another round? (y/n): ") .lower()
+            if retry != "y":
+                print("\n Thank you for using calculator.")
+                sys.exit()
+
 
