@@ -50,3 +50,12 @@ class Calculator:
             n1 = self.get_number("Enter first number: ")
             n2 = self.get_number("Enter second number: ")
 
+            try:
+                result = self.operator.calculate(n1, n2, self.menu[choice])
+                print(f"\n Result: {n1} {self._get_symbol(choice)} {n2} = {result}")
+            except ZeroDivisionError as e:
+                print(f"\n {e}")
+            except Exception as e:
+                print(f"\n An expected error occurred: {e}")
+
+
