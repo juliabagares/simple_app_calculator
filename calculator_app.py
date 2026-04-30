@@ -68,7 +68,8 @@ class Calculator:
         symbols = {'1': '+', '2': '-', '3': '*', '4': '/'}
         return symbols.get(choice)
 
-
-
+if __name__ == "__main__":
+    app = Calculator()
+    app.run()
 
 
