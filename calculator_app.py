@@ -10,9 +10,7 @@ class Math:
         elif operation == '3':
             return num1 * num2
         elif operation == '4':
-            if num1 == 0:
-                raise ZeroDivisionError ("You can't divide by zero")
-            elif num2 == 0:
+            if num2 == 0:
                 raise ZeroDivisionError ("You can't divide by zero")
             return num1 / num2
         else:
@@ -51,20 +49,19 @@ class Calculator:
             n2 = self.get_number("Enter second number: ")
 
             try:
-                result = self.operator.calculate(n1, n2, self.menu[choice])
+                result = self.operator.calculate(n1, n2, choice)
                 print(f"\n Result: {n1} {self._get_symbol(choice)} {n2} = {result}")
             except ZeroDivisionError as e:
                 print(f"\n {e}")
             except Exception as e:
                 print(f"\n An expected error occurred: {e}")
 
-            retry = input("\n Want ot go another round? (y/n): ") .lower()
+            retry = input("\n Want to go another round? (y/n): ") .lower()
             if retry != "y":
                 print("\n Thank you for using calculator.")
                 sys.exit()
 
-    @staticmethod
-    def _get_symbol(choice):
+    def _get_symbol(self, choice):
         symbols = {'1': '+', '2': '-', '3': '*', '4': '/'}
         return symbols.get(choice)
 
