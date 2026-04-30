@@ -63,4 +63,12 @@ class Calculator:
                 print("\n Thank you for using calculator.")
                 sys.exit()
 
+    @staticmethod
+    def _get_symbol(choice):
+        symbols = {'1': '+', '2': '-', '3': '*', '4': '/'}
+        return symbols.get(choice)
+
+
+
+
 
