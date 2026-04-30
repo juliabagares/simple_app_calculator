@@ -34,5 +34,17 @@ class Calculator:
                 return float(input(prompt))
             except ValueError:
                 print("That's not a number. Please try again.")
-            
+
+    def run(self):
+        print("Welcome to Calculator")
+        while True:
+            print("\n Select an operation:")
+            for key, value in self.menu.items():
+                print(f"{key}: {value}")
+            choice = input("\n Enter your choice: ")
+            if choice not in self.menu:
+                print("Invalid choice. Choose 1, 2, 3, or 4.")
+                continue
+                
+
 
